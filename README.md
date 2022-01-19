@@ -48,7 +48,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ---
 
+**Video:**
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sFr4izuGuPA/maxresdefault.jpg)](https://www.youtube.com/watch?v=sFr4izuGuPA)
+
 #### Minimum Requirement to install hyper-V
 
 ----
@@ -123,6 +126,8 @@ DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 ## Section-3 : Installation of MiniKube and Kubectl
 
 ---
+**Video :** 
+
 [![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section3_step1.png)](https://www.youtube.com/watch?v=B9hyHW2HK9M)
 
 
