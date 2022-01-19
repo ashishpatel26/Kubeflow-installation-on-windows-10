@@ -17,7 +17,7 @@ Official Kubeflow : https://github.com/kubeflow/kubeflow
 
 ---
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\step1_1.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/step1_1.jpg)
 
 #### Step-2 Paste the following command into Powershell and press enter.
 
@@ -36,11 +36,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 > **Answer Yes when prompted**
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\step1_2.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/step1_2.jpg
 
 > **Close and reopen an elevated PowerShell window to start using `choco`**
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\step1_3.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/step1_3.jpg)
 
 
 
@@ -123,7 +123,7 @@ DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 ## Section-3 : Installation of MiniKube and Kubectl
 
 ---
-[![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\Section3_step1.png)](https://www.youtube.com/watch?v=B9hyHW2HK9M)
+[![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section3_step1.png)](https://www.youtube.com/watch?v=B9hyHW2HK9M)
 
 
 
@@ -138,13 +138,13 @@ choco install kubectl
 
 
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\Section3_step2.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section3_step2.jpg)
 
 #### **Step : 2**: Type `Choco install kubectl` on powershell with run as administrator mode
 
 ---
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\Section3_step3.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section3_step3.jpg)
 
 ## Section-4 : Change setting in Hyper-V
 
