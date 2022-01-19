@@ -1,6 +1,8 @@
 # Kubeflow-installation-on-windows-10/11
 > **Kubeflow installation on windows 10/11**
 
+![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\logo.jpg)
+
 Official Kubeflow : https://github.com/kubeflow/kubeflow
 
 ## Section 1 : Installation of Choco on Windows 10 or Windows 11
@@ -9,7 +11,7 @@ Official Kubeflow : https://github.com/kubeflow/kubeflow
 
 **Video References**
 
-<iframe width="768" height="400" src="https://www.youtube.com/embed/-5WLKu_J_AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-5WLKu_J_AE/maxresdefault.jpg)](https://www.youtube.com/watch?v=-5WLKu_J_AE)
 
 #### **Step 1: Installing the Chocolatey Package manager for Windows**
 
@@ -46,8 +48,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ---
 
-<iframe width="768" height="400" src="https://www.youtube.com/embed/sFr4izuGuPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sFr4izuGuPA/maxresdefault.jpg)](https://www.youtube.com/watch?v=sFr4izuGuPA)
 #### Minimum Requirement to install hyper-V
 
 ----
@@ -56,6 +57,23 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 - 64-bit Processor with Second Level Address Translation (SLAT).
 - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
 - Minimum of 4 GB memory.
+
+**Trick setup :** 
+
+```bash
+pushd "%~dp0"
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hv.txt
+for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+del hv.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
+pause
+```
+
+Save above code save as with name `hv.bat`.
+
+and click on Run as Administrator
+
+![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\hv.jpg)
 
 ## Enable Hyper-V using PowerShell
 
@@ -105,6 +123,95 @@ DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 ## Section-3 : Installation of MiniKube and Kubectl
 
 ---
+[![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\Section3_step1.png)](https://www.youtube.com/watch?v=B9hyHW2HK9M)
 
-<iframe width="768" height="400" src="https://www.youtube.com/embed/B9hyHW2HK9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+#### **Step : 1**: Type `Choco install minikube` on powershell with run as administrator mode
+
+---
+
+```powershell
+choco install minikube
+choco install kubectl
+```
+
+
+
+![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\Section3_step2.jpg)
+
+#### **Step : 2**: Type `Choco install kubectl` on powershell with run as administrator mode
+
+---
+
+![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\Section3_step3.jpg)
+
+## Section-4 : Change setting in Hyper-V
+
+---
+
+**Step 1: Open the Hyper-V Manager.**
+
+![](https://miro.medium.com/max/720/1*BDkfXerXSUMttd2IU0VL9g.png)
+
+**Step 2: Once in the Hyper-V Manager, on the right panel, select the Virtual Switch Manager.**
+
+![](https://miro.medium.com/max/898/1*FVb8sfWZMlXrT9i0Xtbb_g.png)
+
+**Step 3: Next we will create a virtual switch for minikube. Select `New virtual network switch` on the right hand side, select `External` for the network type, and then press the `Create Virtual Switch button.`**
+
+![](https://miro.medium.com/max/1330/1*xwFelgX0H_c91tBknDu-_w.png)
+
+**Step 4: Name the switch `Primary Virtual Switch` and click the apply button.**
+
+![](https://miro.medium.com/max/1400/1*71ynSa77g4npuQXHJvPNrw.png)
+
+**Step 5 : Once you have the switch created we are now ready to start minikube. Run the following command to start the minikube VM with our applied changes.**
+
+```powershell
+minikube start --vm-driver hyperv --hyperv-virtual-switch "Primary Virtual Switch"
+```
+
+![](https://miro.medium.com/max/1400/1*3MuYyS4meXm59O_0xwgfFA.png)
+
+In your administrator command line window stop the minikube VM with the following command.
+
+```powershell
+minikube stop
+```
+
+**Step  6 : Once minikube has stopped, open the Hyper-V Manager again and right click on the minikube VM and select settings.**
+
+![img](https://miro.medium.com/max/964/1*g4btrIldO_U0WNNDmTs-fg.png)
+
+**Step 7: Select the `Memory` option on the left panel, then de-select `Enable Dynamic Memory`, and then click `Apply` button.**
+
+![](https://miro.medium.com/max/1254/1*2oOZj3kxuZXEEJBo99HsVg.png)
+
+**Step 9: Close Hyper-V manager and then return to the administrator command line window and restart minikube.**
+
+```powershell
+minikube start
+```
+
+Once minikube is restarted you should be ready to go. We will confirm the installation is ready by checking a couple of things.
+
+**Step 10: Check kubectl**
+
+```powershell
+kubectl get pods -n kube-system
+```
+
+![](https://miro.medium.com/max/1400/1*LfRnLyiuMWO1DfhuQzsAVg.png)
+
+If you are a little more visual and want to see the kubernetes dashboard, you can open that up by typing in the following command in the command line window.
+
+**Step 11: Open Kubernets Cluster in Chrome Browser type below command.**
+
+```powershell
+minikube dashboard
+```
+
+![](https://miro.medium.com/max/1400/1*F3C6rW8T177KeKJRVH_NFA.png)
+
+Now you are ready to explore and start your journey to learning Kubernetes.
