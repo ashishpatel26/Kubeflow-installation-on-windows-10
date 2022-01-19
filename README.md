@@ -13,7 +13,7 @@ Install docker on windows11.
 
 2. Open command prompt with “**Run as administrator**”.
 
-![Run Windows Terminal with Administrator Privileges](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image002.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image002.jpg)
 
 3.  Type command: wsl –install -d Ubuntu
 
@@ -21,7 +21,7 @@ Install docker on windows11.
 
  
 
-![Text  Description automatically generated](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image004.jpg)
 
 Then restart your PC.
 
@@ -29,7 +29,7 @@ Then restart your PC.
 
 https://docs.docker.com/desktop/windows/wsl/
 
-![Text  Description automatically generated](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image006.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image006.jpg)
 
 5. Setup the docker step by step
 
