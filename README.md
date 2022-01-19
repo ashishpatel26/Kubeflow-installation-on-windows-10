@@ -76,7 +76,7 @@ Save above code save as with name `hv.bat`.
 
 and click on Run as Administrator
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\hv.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/hv.jpg)
 
 ## Enable Hyper-V using PowerShell
 
