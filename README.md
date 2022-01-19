@@ -41,7 +41,9 @@ YouTube: [https://www.youtube.com/watch?v=BMBwyadxokc&t=55s&ab_channel=Sonoo%27s
 
 1. **Run the Docker** 
 
+```powershell
 Docker run -p 8000:8000 money_api_new:1.0
+```
 
 
 
