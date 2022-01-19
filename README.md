@@ -1,4 +1,7 @@
-# Kubeflow-installation-on-windows-10/11
+# Kubeflow-installation-on-windows-10/11 
+
+# ![image](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)![](https://img.shields.io/badge/kubernetes-326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white) ![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)   
+
 > **Kubeflow installation on windows 10/11**
 
 ![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/logo.jpg)
@@ -262,3 +265,7 @@ minikube dashboard
 ![](https://miro.medium.com/max/1400/1*F3C6rW8T177KeKJRVH_NFA.png)
 
 Now you are ready to explore and start your journey to learning Kubernetes.
+
+---
+
+**Note :** **This Repo is for education purpose only.**
