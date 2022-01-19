@@ -1,7 +1,7 @@
 # Kubeflow-installation-on-windows-10/11
 > **Kubeflow installation on windows 10/11**
 
-![](D:\newgithub\Kubeflow-installation-on-windows-10\Images\logo.jpg)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/logo.jpg)
 
 Official Kubeflow : https://github.com/kubeflow/kubeflow
 
