@@ -5,6 +5,46 @@
 
 Official Kubeflow : https://github.com/kubeflow/kubeflow
 
+## Section 0: **Docker Installation**
+
+Install docker on windows11.
+
+1. Install **wsl2** : [installation video](https://www.youtube.com/watch?v=n-J9438Mv-s&ab_channel=Pureinfotech) .
+
+2. Open command prompt with “**Run as administrator**”.
+
+![Run Windows Terminal with Administrator Privileges](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image002.jpg)
+
+3.  Type command: wsl –install -d Ubuntu
+
+​		**YouTube**: [https://www.youtube.com/watch?v=ysRfLJCBo_M&ab_channel=Sonoo%27sKB](https://www.youtube.com/watch?v=ysRfLJCBo_M&ab_channel=Sonoo'sKB)
+
+ 
+
+![Text  Description automatically generated](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/)
+
+Then restart your PC.
+
+4. Download Docker from the below link.
+
+https://docs.docker.com/desktop/windows/wsl/
+
+![Text  Description automatically generated](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/clip_image006.jpg)
+
+5. Setup the docker step by step
+
+YouTube: [https://www.youtube.com/watch?v=BMBwyadxokc&t=55s&ab_channel=Sonoo%27sKB](https://www.youtube.com/watch?v=BMBwyadxokc&t=55s&ab_channel=Sonoo'sKB)
+
+ #### **Docker file Run:**
+
+---
+
+1. **Run the Docker** 
+
+Docker run -p 8000:8000 money_api_new:1.0
+
+
+
 ## Section 1 : Installation of Choco on Windows 10 or Windows 11
 
 ---
