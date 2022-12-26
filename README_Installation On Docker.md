@@ -202,7 +202,7 @@ choco install kubectl
 
 **Step 1: Open the powershell.**
 
-![](D:\Github\Kubeflow-installation-on-windows-10\Images\Section4_step1_powershell_open.png)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section4_step1_powershell_open.png)
 
 **Step 2: Delete all minikube junks installation type below command**
 
@@ -212,7 +212,7 @@ minikube delete --all
 
 
 
-![ ](D:\Github\Kubeflow-installation-on-windows-10\Images\Section4_step2_delete_extra_junks_of_minikube.png)
+![ ](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section4_step2_delete_extra_junks_of_minikube.png)
 
 **Step 3: Start minikube using Docker.**
 
@@ -220,7 +220,7 @@ minikube delete --all
  minikube start --vm-driver docker	
 ```
 
-![](D:\Github\Kubeflow-installation-on-windows-10\Images\Section4_step3_minikube_start_using_Docker.png)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section4_step3_minikube_start_using_Docker.png)
 
 **Step 4: Check kubectl**
 
@@ -228,7 +228,7 @@ minikube delete --all
 kubectl get pods -n kube-system
 ```
 
-![](D:\Github\Kubeflow-installation-on-windows-10\Images\Section4_step4_kubectl_check_pods.png)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section4_step4_kubectl_check_pods.png)
 
 If you are a little more visual and want to see the kubernetes dashboard, you can open that up by typing in the following command in the command line window.
 
@@ -238,9 +238,9 @@ If you are a little more visual and want to see the kubernetes dashboard, you ca
 minikube dashboard
 ```
 
-![](D:\Github\Kubeflow-installation-on-windows-10\Images\Section4_step5_Start_Kubernetes_dashboard.png)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section4_step5_Start_Kubernetes_dashboard.png)
 
-![](D:\Github\Kubeflow-installation-on-windows-10\Images\Section4_step6_cluster_starting.png)
+![](https://raw.githubusercontent.com/ashishpatel26/Kubeflow-installation-on-windows-10/main/Images/Section4_step6_cluster_starting.png)
 
 **Now you are ready to explore and start your journey to learning Kubernetes.**
 
